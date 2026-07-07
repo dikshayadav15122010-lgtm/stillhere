@@ -9,7 +9,7 @@ const letter = document.querySelector(".letter");
 
 openBtn.addEventListener("click",()=>{
 
-topFlap.style.transform="rotateX(180deg)";
+topFlap.style.transform="rotateX(180deg) translateY(-5px)";
 
 letter.style.top="-70px";
 
