@@ -4,16 +4,31 @@ const backBtn = document.getElementById("backBtn");
 const page1 = document.getElementById("page1");
 const page2 = document.getElementById("page2");
 
-openBtn.onclick = () => {
+const topFlap = document.querySelector(".top");
+const letter = document.querySelector(".letter");
 
-page1.style.display = "none";
-page2.style.display = "block";
+openBtn.addEventListener("click",()=>{
 
-}
+topFlap.style.transform="rotateX(180deg)";
 
-backBtn.onclick = () => {
+letter.style.top="-70px";
 
-page2.style.display = "none";
-page1.style.display = "block";
+setTimeout(()=>{
 
-}
+page1.style.display="none";
+page2.style.display="block";
+
+},900);
+
+});
+
+backBtn.addEventListener("click",()=>{
+
+page2.style.display="none";
+page1.style.display="block";
+
+topFlap.style.transform="rotateX(0deg)";
+
+letter.style.top="20px";
+
+});
