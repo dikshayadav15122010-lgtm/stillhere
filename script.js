@@ -1,17 +1,19 @@
-const button = document.querySelector("button");
+const openBtn = document.getElementById("openBtn");
+const backBtn = document.getElementById("backBtn");
 
-button.addEventListener("click", function(){
+const page1 = document.getElementById("page1");
+const page2 = document.getElementById("page2");
 
-document.body.innerHTML=`
+openBtn.onclick = () => {
 
-<div class="container">
+page1.style.display = "none";
+page2.style.display = "block";
 
-<h1>Hello :)</h1>
+}
 
-<p>This is where our letter will begin...</p>
+backBtn.onclick = () => {
 
-</div>
+page2.style.display = "none";
+page1.style.display = "block";
 
-`;
-
-});
+}
